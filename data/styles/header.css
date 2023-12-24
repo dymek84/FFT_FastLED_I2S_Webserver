@@ -1,0 +1,201 @@
+.settings_block {
+	position: absolute;
+	z-index: 1000;
+	top: 60px;
+	right: 6px;
+	width: 170px;
+	background-color: rgba(10,10,15,.9);
+	/* background: linear-gradient(to top left, rgba(0, 0, 0, 1), rgba(100, 140, 140, 1)); */
+	border-radius: 3px;
+	border: 1px solid #ccc;
+
+	display: none;
+
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	text-align: right;
+	font-size: 22px;
+	color: #ccc;
+	gap: 10px;
+	padding: 10px;
+
+}
+
+.colorpicker_block {
+	/* display: none; */
+	position: absolute;
+	z-index: 100;
+	display: flex;
+	left: 0;
+	right: 0;
+	justify-content: center;
+}
+
+#colorpicker {
+	/* box-shadow: 0px 0px 10px 10px red inset, 0 0 10px red; */
+	border-radius: 50%;
+}
+
+.toggle_colorpicker_block {
+	position: absolute;
+	z-index: 1000;
+	left: 10px;
+	top: 10px;
+}
+.toggle_colorpicker_block input[type=checkbox] {
+	display: none;
+}
+
+.toggle_colorpicker_block label {
+	display: block;
+	height: 50px;
+	width: 50px;
+	background-image: url('../icons/colorpicker.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	transition: .4s;
+}
+
+.toggle_colorpicker_block input[type=checkbox]:checked + label {
+	/* transform: scale(-1,1); */
+	filter: invert();
+	background-image: url('../icons/close.png');
+	background-size: 40px;
+
+}
+
+.theme_setter_block input[type=radio] {
+	display: none;
+}
+
+.theme_setter_block label {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin: 6px 2px 0 2px;
+	border-radius: 3px;
+	color: #bbb;
+	border: 2px solid #555;
+}
+
+.theme_setter_block .theme_yellowGreen + label {
+	background-color:yellowgreen ;
+}
+.theme_setter_block .theme_royalBlue + label {
+	background:royalblue ;
+}
+.theme_setter_block .theme_orangeRed + label {
+	background:orangered ;
+}
+
+.theme_setter_block input[type=radio]:checked + label {
+	border: 2px solid white;
+}
+
+.toggle_fill_panel_block input {
+	width: 22px;
+	height: 22px;
+
+}
+
+.toggle_settings_block {
+	position: absolute;
+	z-index: 1000;
+	right: 10px;
+	top: 10px;
+	/* background-color: #E11328; */
+
+}
+
+.toggle_settings_block input[type=checkbox] {
+	display: none;
+}
+
+.toggle_settings_block label {
+	display: block;
+	height: 40px;
+	width: 40px;
+	background-image: url('../icons/settings.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	filter: invert();
+	/* background-size: 18px; */
+	transition: .2s;
+}
+
+.toggle_settings_block input[type=checkbox]:checked + label {
+	transform: rotate(45deg);
+
+}
+
+.toggle_content_block {
+	position: absolute;
+	z-index: 1000;
+	right: 10px;
+	top: 70px;
+
+}
+
+.toggle_content_block input[type=checkbox] {
+	display: none;
+}
+
+.toggle_content_block label {
+	display: block;
+	height: 40px;
+	width: 40px;
+	background-image: url('../icons/effect.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	filter: invert();
+	/* background-size: 18px; */
+	transition: .4s;
+}
+
+.toggle_content_block input[type=checkbox]:checked + label {
+	/* transform: scale(-1,1); */
+	background-image: url('../icons/close.png');
+
+}
+
+
+/* for PC */
+@media only screen and (min-width: 600px) {
+	.toggle_colorpicker_block {
+		left: 30px;
+		top: 5px;
+	}
+	.toggle_colorpicker_block label {
+		height: 40px;
+		width: 40px;
+	}
+	.toggle_colorpicker_block input[type=checkbox]:checked + label {
+		background-size: 30px;
+	}
+	.toggle_settings_block {
+		right: 30px;
+		top: 10px;
+	}
+	.toggle_settings_block label {
+		height: 30px;
+		width: 30px;
+	}
+	.toggle_content_block {
+		top: 10px;
+		right: 80px;
+	}
+	.toggle_content_block label {
+		height: 30px;
+		width: 30px;
+	}
+	.settings_block {
+		top: 60px;
+		right: 30px;
+		font-size: 16px;
+	}
+}

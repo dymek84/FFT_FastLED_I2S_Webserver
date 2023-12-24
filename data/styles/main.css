@@ -1,0 +1,90 @@
+@import './panel.css';
+@import './header.css';
+@import './content.css';
+@import './error.css';
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color-scheme: dark;
+	overflow: hidden;
+
+}
+
+#app {
+	/* background-color: #090a0f; */
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	
+}
+
+
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+	display: flex;
+	align-items: center;
+	justify-content: center;  
+	background-color: #000;
+	transition: all 0.5s;
+	opacity: .98;
+}
+
+.preloader-remove {
+	opacity: 0;
+	z-index: -10;
+}
+
+.preloader img {
+	margin-top: -70px;
+	animation: rotate .4s infinite linear;
+
+}
+
+@keyframes rotate {
+	0% { 
+		transform: rotate(0deg);
+	}
+	100% { 
+		transform: rotate(360deg);
+	}
+}
+
+
+
+/*for PC*/
+@media only screen and (min-width: 600px) {
+
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(100, 100, 100, 1) rgba(0,0,0,.4);
+}
+
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: rgba(178, 178, 178, 0.5);
+}
